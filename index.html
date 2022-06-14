@@ -82,10 +82,22 @@
 					<label for="datetime">Date & Time:</label>
 					<input type="text" id="datetime" name="datetime" />
 				</li>
-				<li class="button">
-					<button type="submit">Generate Emails to Attendees</button>
-				</li>
+        <li>
+          <button onclick="myFunction()">Generate Emails to Attendees</button>
+        </li>
 			</ul>
 		</form>
+    <p id="demo"></p>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("frm1");
+        var text = "";
+        var i;
+        for (i = 0; i < x.length ;i++) {
+          text += x.elements[i].value + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+      </script>
 	</body>
 </html>
